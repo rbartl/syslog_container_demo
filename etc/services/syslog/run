@@ -1,0 +1,4 @@
+#!/bin/bash -e
+# link the log socket into the postfix chroot environment
+ln -sf /dev/log /var/spool/postfix/dev/
+exec /sbin/syslogd -n -O /dev/stdout
